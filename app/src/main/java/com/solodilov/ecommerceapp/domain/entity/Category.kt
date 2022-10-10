@@ -1,0 +1,25 @@
+package com.solodilov.ecommerceapp.domain.entity
+
+enum class Category(val apiName: String) {
+    ALL(""),
+    SMARTPHONE("smartphones"),
+    LAPTOP("laptops"),
+    FRAGRANCE("fragrances"),
+    SKINCARE("skincare"),
+    GROCERY("groceries"),
+    HOME_DECOR("home-decoration"),
+    FURNITURE("furniture"),
+    TOP("tops"),
+    WOMEN_DRESS("womens-dresses"),
+    WOMEN_SHOE("womens-shoes"),
+    MEN_SHIRT("mens-shirts"),
+    MEN_SHOE("mens-shoes"),
+    MEN_WATCH("mens-watches"),
+    WOMEN_WATCH("womens-watches"),
+    WOMEN_BAG("womens-bags"),
+    WOMEN_JEWELLERY("womens-jewellery"),
+    SUNGLASS("sunglasses"),
+    AUTOMOTIVE("automotive"),
+    MOTORCYCLE("motorcycle"),
+    LIGHTING("lighting"),
+}
