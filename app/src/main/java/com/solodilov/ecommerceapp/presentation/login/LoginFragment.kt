@@ -95,7 +95,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun startProductListFragment() {
-        findNavController().navigate(R.id.action_login_fragment_to_product_list_fragment2)
+        findNavController().navigate(R.id.action_login_fragment_to_product_list_fragment)
     }
 
     private fun showLoginFailed() {

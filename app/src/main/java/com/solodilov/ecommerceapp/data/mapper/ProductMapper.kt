@@ -1,6 +1,8 @@
 package com.solodilov.ecommerceapp.data.mapper
 
+import com.solodilov.ecommerceapp.data.model.CartProductDto
 import com.solodilov.ecommerceapp.data.model.ProductDto
+import com.solodilov.ecommerceapp.domain.entity.CartProduct
 import com.solodilov.ecommerceapp.domain.entity.Category
 import com.solodilov.ecommerceapp.domain.entity.Product
 import javax.inject.Inject
@@ -20,6 +22,12 @@ class ProductMapper @Inject constructor() {
             images = productDto.images
         )
 
-
-
+    fun mapCartProductDtoToCartProduct(cartProductDto: CartProductDto): CartProduct =
+        CartProduct(
+            id = cartProductDto.id,
+            title = cartProductDto.title,
+            price = cartProductDto.price,
+            quantity = cartProductDto.quantity,
+            total = cartProductDto.total,
+        )
 }

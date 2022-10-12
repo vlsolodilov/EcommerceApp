@@ -1,9 +1,6 @@
 package com.solodilov.ecommerceapp.data.network
 
-import com.solodilov.ecommerceapp.data.model.AllProductsDto
-import com.solodilov.ecommerceapp.data.model.AuthDto
-import com.solodilov.ecommerceapp.data.model.LoggedInUserDto
-import com.solodilov.ecommerceapp.data.model.ProductDto
+import com.solodilov.ecommerceapp.data.model.*
 import retrofit2.http.*
 
 interface DummyJsonApi {
@@ -19,4 +16,7 @@ interface DummyJsonApi {
 
     @GET("products/category/{category}")
     suspend fun getProductListByCategory(@Path("category") category: String): AllProductsDto
+
+    @GET("carts/user/{id}")
+    suspend fun getCartsOfUser(@Path("id") id: Int): AllCartsDto
 }

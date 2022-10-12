@@ -2,6 +2,7 @@ package com.solodilov.ecommerceapp.di
 
 import android.app.Application
 import com.solodilov.ecommerceapp.presentation.MainActivity
+import com.solodilov.ecommerceapp.presentation.cart.CartFragment
 import com.solodilov.ecommerceapp.presentation.login.LoginFragment
 import com.solodilov.ecommerceapp.presentation.productlist.ProductListFragment
 import dagger.BindsInstance
@@ -20,6 +21,7 @@ interface ApplicationComponent {
 	fun inject(activity: MainActivity)
 	fun inject(fragment: LoginFragment)
 	fun inject(fragment: ProductListFragment)
+	fun inject(fragment: CartFragment)
 
 	@Component.Factory
 	interface Factory {

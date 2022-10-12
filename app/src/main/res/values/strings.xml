@@ -22,4 +22,8 @@
     <string name="most_popular">Most Popular</string>
     <string name="price_format">\$%d</string>
     <string name="auth_error">Authorisation error</string>
+    <string name="my_cart">My cart</string>
+    <string name="total_price">Total price</string>
+    <string name="checkout">Checkout</string>
+    <string name="cart_is_empty">Cart is empty</string>
 </resources>

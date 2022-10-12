@@ -10,6 +10,7 @@ import com.solodilov.ecommerceapp.domain.exeption.UserException
 import com.solodilov.ecommerceapp.domain.usecase.GetTokenUseCase
 import com.solodilov.ecommerceapp.domain.usecase.LoginUseCase
 import com.solodilov.ecommerceapp.domain.usecase.SaveTokenUseCase
+import com.solodilov.ecommerceapp.domain.usecase.SaveUserIdUseCase
 import com.solodilov.solodilovhomework.extension.LiveEvent
 import com.solodilov.solodilovhomework.extension.MutableLiveEvent
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -19,6 +20,7 @@ import javax.inject.Inject
 class LoginViewModel @Inject constructor(
     private val getTokenUseCase: GetTokenUseCase,
     private val saveTokenUseCase: SaveTokenUseCase,
+    private val saveUserIdUseCase: SaveUserIdUseCase,
     private val loginUseCase: LoginUseCase,
 ) : ViewModel() {
 
@@ -56,6 +58,7 @@ class LoginViewModel @Inject constructor(
             when (val result = loginUseCase(username, password)) {
                 is Result.Success ->  {
                     saveTokenUseCase(result.data.token)
+                    saveUserIdUseCase(result.data.id)
                     _loginSuccessEvent()
                 }
                 is Result.Error -> {
