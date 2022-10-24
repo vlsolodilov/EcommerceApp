@@ -11,8 +11,8 @@ import com.solodilov.ecommerceapp.domain.usecase.GetTokenUseCase
 import com.solodilov.ecommerceapp.domain.usecase.LoginUseCase
 import com.solodilov.ecommerceapp.domain.usecase.SaveTokenUseCase
 import com.solodilov.ecommerceapp.domain.usecase.SaveUserIdUseCase
-import com.solodilov.solodilovhomework.extension.LiveEvent
-import com.solodilov.solodilovhomework.extension.MutableLiveEvent
+import com.solodilov.ecommerceapp.extension.LiveEvent
+import com.solodilov.ecommerceapp.extension.MutableLiveEvent
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package com.solodilov.solodilovhomework.extension
+package com.solodilov.ecommerceapp.extension
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner

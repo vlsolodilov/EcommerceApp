@@ -130,7 +130,9 @@ class ProductListFragment : Fragment() {
     }
 
     private fun startProductDetailFragment(productId: Int) {
-
+        val action = ProductListFragmentDirections
+            .actionProductListFragmentToProductDetailFragment(productId)
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {

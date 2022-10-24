@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.fragment_container) as NavHostFragment? ?: return
         val navController = host.navController
         val navView: BottomNavigationView = binding.bottomNavigation
-        binding.bottomNavigation.setupWithNavController(navController)
+        navView.setupWithNavController(navController)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id) {
                 R.id.product_list_fragment,

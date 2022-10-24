@@ -20,10 +20,22 @@
         android:name="com.solodilov.ecommerceapp.presentation.productlist.ProductListFragment"
         android:label="ProductListFragment"
         tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_product_list_fragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/cart_fragment"
         android:name="com.solodilov.ecommerceapp.presentation.cart.CartFragment"
         android:label="CartFragment"
         tools:layout="@layout/fragment_cart"/>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.solodilov.ecommerceapp.presentation.productdetail.ProductDetailFragment"
+        android:label="ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="product_id"
+            app:argType="integer" />
+    </fragment>
 </navigation>

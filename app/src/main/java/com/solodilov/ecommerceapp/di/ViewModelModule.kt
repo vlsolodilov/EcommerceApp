@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.solodilov.ecommerceapp.presentation.ViewModelFactory
 import com.solodilov.ecommerceapp.presentation.cart.CartViewModel
 import com.solodilov.ecommerceapp.presentation.login.LoginViewModel
+import com.solodilov.ecommerceapp.presentation.productdetail.ProductDetailViewModel
 import com.solodilov.ecommerceapp.presentation.productlist.ProductListViewModel
 import dagger.Binds
 import dagger.Module
@@ -30,4 +31,9 @@ interface ViewModelModule {
     @IntoMap
     @ViewModelKey(CartViewModel::class)
     fun bindCartViewModel(viewModel: CartViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ProductDetailViewModel::class)
+    fun bindProductDetailViewModel(viewModel: ProductDetailViewModel): ViewModel
 }
